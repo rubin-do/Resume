@@ -22,5 +22,4 @@ jobs:
     steps:
       - name: Build image
         run: |
-          cd ..
-          ls -la
+            cat Axer1001/Resume/Dockerfile
