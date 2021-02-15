@@ -12,7 +12,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install --yes --no-install-
       texlive-science \
       cm-super 
 
-COPY mitm.tex /resume/resume.tex
+COPY resume.tex /resume/resume.tex
 COPY makeCV.sh /resume/makeCV.sh
 WORKDIR /resume
 RUN /resume/makeCV.sh
