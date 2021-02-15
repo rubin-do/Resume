@@ -22,4 +22,4 @@ jobs:
     steps:
       - name: Build image
         run: |
-          docker build --tag moony_moon -f ../Dockerfile .
+          ls -la
