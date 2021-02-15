@@ -1,0 +1,75 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{ifthen}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{physics}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\graphicspath{./images_3/}
+
+\begin{document}
+\begin{center}
+    \LARGE
+       \textbf{Исследование абстрактных циклических групп, ДЗ №1} \\ {\Large НИУ ВШЭ, Прикладная математика и информатика, 196 группа} \\ Рубин Даниил \\ \today.
+\end{center}
+\newpage
+
+\section*{Исследовать абстрактную циклическую группу порядка 24}
+    \subsection*{Запишем группу:}
+        G = \{$1_G,x^{1}, x^{2}, x^{3}, x^{4}, x^{5}, x^{6}, x^{7}, x^{8}, x^{9}, x^{10}, x^{11}, x^{12}, x^{13}, x^{14}, x^{15}, x^{16}, x^{17}, x^{18}, x^{19}, x^{20}, x^{21}, x^{22}, x^{23}$\}
+    \subsection*{Определим порядки всех элементов группы}
+        \begin{itemize}
+            \item O($1_G$) = 1
+            \item O($x^1$) = 24
+            \item O($x^{2}$) = 12
+            \item O($x^{3}$) = 8
+            \item O($x^{4}$) = 6
+            \item O($x^{5}$) = 24
+            \item O($x^{6}$) = 4
+            \item O($x^{7}$) = 24
+            \item O($x^{8}$) = 3
+            \item O($x^{9}$) = 8
+            \item O($x^{10}$) = 12
+            \item O($x^{11}$) = 24
+            \item O($x^{12}$) = 2
+            \item O($x^{13}$) = 24
+            \item O($x^{14}$) = 12
+            \item O($x^{15}$) = 8
+            \item O($x^{16}$) = 3
+            \item O($x^{17}$) = 24
+            \item O($x^{18}$) = 4
+            \item O($x^{19}$) = 24
+            \item O($x^{20}$) = 6
+            \item O($x^{21}$) = 8
+            \item O($x^{22}$) = 12
+            \item O($x^{23}$) = 24
+        \end{itemize}
+            Тогда G = $<x^1>$ = $<x^5>$ = $<x^7>$ = $<x^{11}>$ = $<x^{17}>$ = $<x^{19}>$ = $<x^{23}>$
+        \subsection*{Перечислим циклические подгруппы группы G}
+            $H_1 = <x^2> = <x^{10}> = <x^{14}> = <x^{22}>$ $|H_1| = 12$\\
+            $H_2 = <x^3> = <x^9> = <x^{15}> = <x^{21}>$ $|H_2| = 8$\\
+            $H_3 = <x^4> = <x^{20}>$ $|H_3| = 6$\\
+            $H_4 = <x^8> = <x^{16}>$ $|H_4| = 3$\\
+            $H_5 = <x^{12}>$ $|H_5| = 2$\\
+        \subsection*{Выпишем подгруппы}
+            $H_1$ = \{$1_G, x^{2}, x^{4}, x^{6}, x^{8}, x^{10}, x^{12}, x^{14}, x^{16}, x^{18}, x^{20}, x^{22}$\}\\
+            $H_2$ = \{$1_G, x^{3}, x^{6}, x^{9}, x^{12}, x^{15}, x^{18}, x^{21}$\}\\
+            $H_3$ = \{$1_G, x^{4}, x^{8}, x^{12}, x^{16}, x^{20}$\}\\
+            $H_4$ = \{$1_G, x^{8}, x^{16}$\}\\
+            $H_5$ = \{$1_G, x^{12}$\}\\
+        \begin{center}
+            \includegraphics[width=10cm]{images_3/graph.png}    
+        \end{center}
+        
+\end{document}
