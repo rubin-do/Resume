@@ -20,6 +20,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Build image
+      - name: Copy
+        uses: actions/checkout@v1
+      - name: Build
         run: |
-            cat Axer1001/Resume/Dockerfile
+            cat Dockerfile
