@@ -11,6 +11,7 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install --yes --no-install-
       texlive-pictures \
       texlive-lang-cyrillic \
       texlive-science \
+      texlive-plain-generic \
       cm-super 
 
 COPY resume.tex /resume/resume.tex
