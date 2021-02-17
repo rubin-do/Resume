@@ -2,6 +2,7 @@ FROM ubuntu:20.04
 
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install --yes --no-install-recommends \ 
       texlive-fonts-recommended \
+      tex-common \
       texlive-latex-extra \
       texlive-fonts-extra \
       dvipng \
