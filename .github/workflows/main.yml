@@ -1,5 +1,5 @@
 
-name: Build
+name: Build PDF
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Copy
+      - name: Download Files
         uses: actions/checkout@v1
-      - name: Build
+      - name: Compile PDF
         uses: ./

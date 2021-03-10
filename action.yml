@@ -1,4 +1,4 @@
-name: Build PDF
+name: Compile PDF
 author: Axer
 runs:
   using: docker
