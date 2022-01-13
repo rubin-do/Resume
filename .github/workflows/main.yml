@@ -10,11 +10,14 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    artifacts:
-            paths:
-                    - /resume/resume.pdf
     steps:
       - name: Download Files
         uses: actions/checkout@v1
       - name: Compile PDF
         uses: ./
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+                name: resume
+                path: /resume/resume.pdf
+                retention-days: 5
