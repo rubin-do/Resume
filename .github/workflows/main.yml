@@ -16,7 +16,6 @@ jobs:
         uses: actions/checkout@v1
       - name: Compile PDF
         uses: ./
-
-    artifacts:
-            paths:
-                    - /resume/resume.pdf
+        artifacts:
+                paths:
+                        - /resume/resume.pdf
