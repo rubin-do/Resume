@@ -3,3 +3,4 @@ author: Axer
 runs:
   using: docker
   image: Dockerfile
+  artifacts: /resume/resume.pdf
