@@ -1,135 +1,124 @@
-% --- LaTeX CV Template - S. Venkatraman ---
+\documentclass{resume} % Use the custom resume.cls style
 
-% Set document class and font size
-\documentclass[letterpaper, 11pt]{article}
-\usepackage[utf8]{inputenc}
-
-% Package imports
-\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, everypage, enumitem, amsmath, setspace}
-
-% --- Page layout settings ---
-
-% Set page margins
-\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
-
-% Set line spacing
-\renewcommand{\baselinestretch}{1.15}
-
-% --- Page formatting ---
-
-% Set link colors
-\usepackage[dvipsnames]{xcolor}
-\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
-
-% Set font to Libertine, including math support
-\usepackage{libertine}
-\usepackage[libertine]{newtxmath}
-
-% Remove page numbering
-\pagenumbering{gobble}
-
-% --- Document starts here ---
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Daniil Rubin} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{+7(964) 551-9690 \\ Moscow, Russia} 
+\address{\href{mailto:danyarubin@gmail.com}{danyarubin@gmail.com} \\ \href{https://www.github.com/rubin-do}{GitHub}}  %
 
 \begin{document}
 
-% Name and date of last update to this document
-\noindent{\Huge{Daniil Rubin}
-\hfill{\it\footnotesize Updated \today}}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-% --- Contact information and other items ---
+\begin{rSection}{Education}
 
-\vspace{0.5cm} 
-\begin{center}
-\begin{tabular}{lll}
-% Line 1: Email, GitHub, office location
-\textbf{Email}: dorubin@edu.hse.ru      &
-\hspace{1in} \textbf{GitHub}: Axer1001    & \\
-%\hspace{0.4in} 	\textbf{Office}: Your Building 101 \\
+{\bf BA in Computer Science}, NRU Higher School of Economics \hfill {September 2019 - Present}\\
+Minor in Cyber Security \smallskip \\
+GPA: 6.6 \\
+{\bf 10-11 grades in 1 year (extern)}, Lyceum №1575 \hfill {2018-2019} \\
+GPA: 5.0 / 5
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
 
-% Line 2: Phone number, LinkedIn, citizenship
-\textbf{Phone}: +7(964)551-96-90 &   
-% \hspace{0.55in} \textbf{LinkedIn}: //LinkedIn-URL   & 
-\hspace{1in} \textbf{Citizenship}: Russia
-\end{tabular}
-\end{center}
 
-% --- Start the two-column table storing the main content ---
+\end{rSection}
 
-% Set spacing between columns
-\setlength{\tabcolsep}{8pt}
-
-% Set the width of each column
-\begin{longtable}{p{1.3in}p{4.8in}}
-
-% --- Section: Research interests ---
-
-%\nohyphens{\color{OliveGreen}{Research interests}}
-%& Your favorite topic, another topic, another topic, another topic, another topic \\
-%& \\
-
-% --- Section: Education ---
-
-\color{OliveGreen}{Education} 
-& \textbf{National Research University Higher School of Economics} \hfill Moscow, Russia\\
-& BA in Computer Science, minor in Cyber Security \hfill September 2019 -- Present (third year) \\
-& {\it GPA: 6.52.}\\
-& \\
-
-& \textbf{Lyceum №1575} \hfill Moscow, Russia\\
-& 10-11 grades in 1 year (extern) \hfill 2018 -- 2019 \\
-& {\it GPA: 5.0/5}\\
-& \\
-
-% --- Uncomment the next few lines if you want to include some courses ---
-& \textbf{Selected coursework}
-\begin{itemize}[noitemsep,leftmargin=*]
-\item \underline{Algorithms and Data Structures}: Python
-\item \underline{Algorithms and Data Structures}: C++
-\item \underline{Computer Architercture and Operation Systems}: C, ASM
-\end{itemize} \\
-
-% --- Section: Awards, scholarships, etc. ---
-% --- Note: section title is spread over two lines ---
-
-{\color{OliveGreen}{Honors and}} 
-& Diploma with honor (Middle school) \hfill 2019\\
-{\color{OliveGreen}{scholarships}} 
-& Medal for studying achievements (Middle school)\hfill 2019 \\
-& \\
-
-% --- Section: Various skills (programming, software, languages, etc.) ---
-
-{\color{OliveGreen}{Skills}} 
-& \textbf{Programming}
-
-\begin{itemize}[noitemsep, leftmargin=*]
-    \item C++ -- year of experience (University course)
-    \item C -- half year of experience (University course)
-    \item x86 ASM -- University course
-    \item Python -- year of experience (University course)
-\end{itemize}
-Familiar with: 
-\begin{itemize}[noitemsep, leftmargin=*]
-    \item STL, Algorithms
-    \item OOP: core concepts
-    \item gdb
-    \item Git/Github
-    \item Bash
-    \item Python Libraries: Selenium, Requests
-
-\end{itemize}
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages & Python3, C, C++(STL) \\
+Libraries(Python) & requests, Selenium \\
+Tools & Git, Docker, Docker-compose, gdb, json, protobuf, grpc \\
 \\
-& \textbf{Languages} \\
-& Russian (native), English (upper-intermediate), French (basic) \\
-& \\
+Soft Skills & Time Management, Communication, Problem Solving, Accountability
+\\
+\end{tabular}\\
+\end{rSection}
 
 
 
-% --- Section: Other interests/hobbies ---
+%----------------------------------------------------------------------------------------
+% Projects
+%----------------------------------------------------------------------------------------
+\begin{rSection}{PROJECTS}
+\vspace{-1.25em}
+\item \textbf{Music by mood Telegram bot} {[Python, Yandex-Music API, pyTelegramBot API]} \hfill \href{https://github.com/rubin-do/MoodTelegramBot}{GitHub}
+\begin{itemize}
+    \itemsep -3pt {} 
+     \item Created telegram bot to communicate with user
+    \item Implemented RadioMood class to support mood selection in Yandex-playlists
+     \item Used Yandex-Music API to fetch tracks
+ \end{itemize}
+\item \textbf{Wikipedia path finder} {[Python, curses, requests, RabbitMQ, docker-compose]} \hfill \href{https://github.com/rubin-do/wiki-path-finder}{GitHub}
+\begin{itemize}
+    \itemsep -3pt {} 
+     \item Created url path finder module to find paths between two urls in Python
+     \item Used RabbitMQ to process user requests asynchronously
+     \item Used JSON for request Serialization
+    \item Implemented RPC over RabbitMQ
+    \item Used curses to create console client interface
+ \end{itemize}
+\item \textbf{Integration in SymPy using trigonometric substitutions} {[Python, SymPy]} \hfill \href{https://github.com/rubin-do/sympy-project}{GitHub}
+\begin{itemize}
+    \itemsep -3pt {} 
+     \item Implemented trig\_transform function in Class Integral to support trigonometric substitutions in SymPy
+     \item Added debug feature to function
+    \item Wrote docstring and examples of function usage
+ \end{itemize}
+\end{rSection} 
 
-\nohyphens{\color{OliveGreen}{Other interests}} & CTF, Cyber Security challenges.\\
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Honors and scholarships} 
+\begin{itemize}
+    \item 	Diploma with honor (middle school) \hfill  2019
+    \item	Medal for studying achievements (middle school) \hfill 2019
+\end{itemize}
 
-% --- End of CV! ---
 
-\end{longtable}
+\end{rSection}
+
+%------------------------
+% Use this more detailed section if you have Relevant work experience
+% keep your resume to 1 page, if you need to remove a project to display relevant experience
+% that is okay
+% ----------------------------
+% \begin{rSection}{EXPERIENCE}
+
+% \textbf{Role Name} \hfill Jan 2017 - Jan 2019\\
+% Company Name \hfill \textit{San Francisco, CA}
+%  \begin{itemize}
+%     \itemsep -3pt {} 
+%      \item Achieved X\% growth for XYZ using A, B, and C skills.
+%      \item Led XYZ which led to X\% of improvement in ABC
+%     \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+%  \end{itemize}
+ 
+% \textbf{Role Name} \hfill Jan 2017 - Jan 2019\\
+% Company Name \hfill \textit{San Francisco, CA}
+%  \begin{itemize}
+%     \itemsep -3pt {} 
+%      \item Achieved X\% growth for XYZ using A, B, and C skills.
+%      \item Led XYZ which led to X\% of improvement in ABC
+%     \item Developed XYZ that did A, B, and C using X, Y, and Z. 
+%  \end{itemize}
+
+% \end{rSection} 
+
+\begin{rSection}{Languages}
+
+Russian (Native), English (Upper-intermediate), French (Basic)
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+
+
+
 \end{document}
+

@@ -15,6 +15,9 @@ RUN apt update && DEBIAN_FRONTEND=noninteractive apt install --yes --no-install-
       cm-super 
 
 COPY resume.tex /resume/resume.tex
+COPY resume.cls /resume/resume.cls
 COPY makeCV.sh /resume/makeCV.sh
+
 WORKDIR /resume
+
 RUN /resume/makeCV.sh
